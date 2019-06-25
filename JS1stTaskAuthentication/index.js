@@ -68,7 +68,7 @@ DOMSTRINGS.password.addEventListener('input',function(){
 });
 DOMSTRINGS.cpassword.addEventListener('input',function(){
    DomPasswordError.style.display="none";
-   if(DOMSTRINGS.cpassword.value != DOMSTRINGS.password.value  ){
+   if(DOMSTRINGS.cpassword.value != DOMSTRINGS.password.value || DOMSTRINGS.cpassword.value === ""  ){
       DomPasswordError.style.display="block";
       isitPassword = false;
    }
@@ -112,3 +112,4 @@ function Validator(){
          DOMSTRINGS.signup.style.cursor = "not-allowed";
       }
 }
+
