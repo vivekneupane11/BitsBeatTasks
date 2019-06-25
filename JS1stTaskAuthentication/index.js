@@ -61,9 +61,14 @@ DOMSTRINGS.email.addEventListener('input',function(){
 });
 DOMSTRINGS.password.addEventListener('input',function(){
    DomPasswordError.style.display="none";
-   if(DOMSTRINGS.password.value === "" || DOMSTRINGS.cpassword.value != DOMSTRINGS.password.value ){
+   if(DOMSTRINGS.cpassword.value != DOMSTRINGS.password.value || DOMSTRINGS.cpassword.value === ""  ){
       DomPasswordError.style.display="block";
+      isitPassword = false;
    }
+   else{
+      isitPassword= true;
+   }
+   Validator();
 
 });
 DOMSTRINGS.cpassword.addEventListener('input',function(){
