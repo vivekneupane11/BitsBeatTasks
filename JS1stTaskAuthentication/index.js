@@ -1,3 +1,4 @@
+var DOMSTRINGS = (function(){
 var DomName = document.getElementById('name');
 var DomContact = document.getElementById('contact');
 var DomEmail = document.getElementById('email');
@@ -7,6 +8,21 @@ var DomCheckAccept = document.getElementById('accept-check');
 var DomChecklabel = document.getElementById('checklabel');
 var DomEyeOpener = document.getElementById('eyeOpener');
 var DomSignupButton = document.getElementById('signup');
+
+return {
+	name: DomName,
+	contact:DomContact,
+	email:DomEmail,
+	password:DomPassword,
+	cpassword:DomConfirmPassword,
+	checkaccept:DomCheckAccept,
+	checklabel : DomChecklabel,
+	eyeopener: DomEyeOpener,
+	signup:DomSignupButton
+	
+}
+
+})();
 //iconsdomerrors
 var DomNameError = document.getElementById('nameerror');
 var DomEmailError = document.getElementById('emailerror');
@@ -17,22 +33,22 @@ var isitEmail = false;
 var isitPassword = false;
 var isitChecked = false;
    
-DomName.addEventListener('input',function(){  
+DOMSTRINGS.name.addEventListener('input',function(){  
       DomNameError.style.display = "none";
-      if(DomName.value === ""){
+      if(DOMSTRINGS.name.value === ""){
          DomNameError.style.display="block";
       }
 
 });
-DomContact.addEventListener('input',function(){
+DOMSTRINGS.contact.addEventListener('input',function(){
    DomContactError.style.display="none";
-     if(DomContact.value === "" ){
+     if(DOMSTRINGS.contact.value === "" ){
         DomContactError.style.display="block";
      }
 });
-DomEmail.addEventListener('input',function(){
+DOMSTRINGS.email.addEventListener('input',function(){
       var regEmail = /^[a-zA-Z0-9]+@(gmail|facebook|yahoo)\.com/;
-      var isEmail =  regEmail.test(DomEmail.value);
+      var isEmail =  regEmail.test(DOMSTRINGS.email.value);
       if(isEmail ){
          DomEmailError.style.display="none";
          isitEmail = true;
@@ -43,16 +59,16 @@ DomEmail.addEventListener('input',function(){
       } 
       Validator();                                                                
 });
-DomPassword.addEventListener('input',function(){
+DOMSTRINGS.password.addEventListener('input',function(){
    DomPasswordError.style.display="none";
-   if(DomPassword.value === "" || DomConfirmPassword.value != DomPassword.value ){
+   if(DOMSTRINGS.password.value === "" || DOMSTRINGS.cpassword.value != DOMSTRINGS.password.value ){
       DomPasswordError.style.display="block";
    }
 
 });
-DomConfirmPassword.addEventListener('input',function(){
+DOMSTRINGS.cpassword.addEventListener('input',function(){
    DomPasswordError.style.display="none";
-   if(DomConfirmPassword.value != DomPassword.value  ){
+   if(DOMSTRINGS.cpassword.value != DOMSTRINGS.password.value  ){
       DomPasswordError.style.display="block";
       isitPassword = false;
    }
@@ -61,18 +77,18 @@ DomConfirmPassword.addEventListener('input',function(){
    }
    Validator();
 });
-
-DomEyeOpener.addEventListener('click',function(){
-   if(DomPassword.type == "text"){
-      DomPassword.type = "password";
+DOMSTRINGS.eyeopener.addEventListener('click',function(){
+   if(DOMSTRINGS.password.type == "text"){
+      DOMSTRINGS.password.type = "password";
    }
-   else   DomPassword.type = "text";
+   else   DOMSTRINGS.password.type = "text";
  
 });
 
-DomChecklabel.addEventListener('click',function(){
-  if(DomCheckAccept.checked){
+DOMSTRINGS.checklabel.addEventListener('click',function(){
+  if(DOMSTRINGS.checkaccept.checked){
    isitChecked = false;
+   document.getElementById('checkicons').style.color = "#00e600";
   }
   else isitChecked = true;
  
@@ -84,15 +100,15 @@ DomChecklabel.addEventListener('click',function(){
 
 function Validator(){
    if(isitChecked && isitEmail && isitPassword){
-      DomSignupButton.disabled = false;
-      DomSignupButton.style.backgroundColor= "#00e600";
-       DomSignupButton.style.cursor = "pointer";
+      DOMSTRINGS.signup.disabled = false;
+      DOMSTRINGS.signup.style.backgroundColor= "#00e600";
+      DOMSTRINGS.signup.style.cursor = "pointer";
      
    
       }
       else{
-         DomSignupButton.disabled = true;
-         DomSignupButton.style.backgroundColor= "red";
-          DomSignupButton.style.cursor = "not-allowed";
+         DOMSTRINGS.signup.disabled = true;
+         DOMSTRINGS.signup.style.backgroundColor= "red";
+         DOMSTRINGS.signup.style.cursor = "not-allowed";
       }
 }

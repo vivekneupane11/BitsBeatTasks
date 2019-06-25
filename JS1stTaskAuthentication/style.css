@@ -91,7 +91,9 @@ i{
       font-weight:600;
   }
 
-       
+  .check{
+      display:none;  
+  }     
   .signup{
       margin:10px;
       font-weight:600;
