@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+body {
+    margin:0;
+    padding:0;
+    color: #444;
+    font-family: 'Helvetica', arial, sans-serif;
+  }
+  
+  .container {
+    min-width:1200px;
+    min-height:100vh;
+    background: #c31432;  
+    display: table;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 1px solid #cfcbcc;
+    /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: table;
+  
+  }
+  form{
+    display:grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    background-color: #240b36;
+  }
+  input {
+    width:200px;
+    color:white;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 0px;
+    line-height: 1;
+    color: gray;
+  }
+ 
+  
+  ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color:wheat;
+    width:500px;
+    margin-left:350px;
+  }
+  ul li {
+    color: #899098;
+    font-weight: 400;
+    border-bottom: 1px solid #cfcbcc;
+    padding: 8px 0;
+  
+  }
+  ul li:before {
+    content: "";
+    padding: 10px 10px;
+    font-size: 20px;
+  }
+  ul li:hover {
+    text-decoration: line-through;
+    cursor: pointer;
+  }
+  ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .checked {
+    color: green;
+  }
+  .checked:before {
+    content: "\2713";
+    padding: 10px 10px;
+    font-size: 20px;
+  }
+  .checked:hover {
+    text-decoration: none;
+  }
+  .checked:hover:after {
+    content: "(Delete)";
+    color: tomato;
+    text-align: right;
+  }
+  
