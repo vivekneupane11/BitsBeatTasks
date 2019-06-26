@@ -1,6 +1,6 @@
 (function(){
   
-    var list = document.getElementById("list");
+    let list = document.getElementById("list");
         form = document.getElementById("form");
         item = document.getElementById("item");
         addButton = document.getElementById("addButton");
@@ -13,7 +13,7 @@
     },false)
     
     list.addEventListener('click',function(event){
-      var listevent = event.target;
+      let listevent = event.target;
       console.log(listevent.parentNode);
       if(listevent.classList.contains('checked')){
         listevent.parentNode.removeChild(listevent);
@@ -28,7 +28,7 @@
     }
     
     function getValues() {
-      var storedValues = window.localStorage.myitems;
+      let storedValues = window.localStorage.myitems;
       if(!storedValues) {
         list.innerHTML = '<li>Our first task</li>'+
                          '<li>Our second task</li>'+
