@@ -7,7 +7,7 @@
 body {
     margin:0;
     padding:0;
-    color: #444;
+    color: white;
     font-family: 'Helvetica', arial, sans-serif;
   }
   
@@ -25,39 +25,34 @@ background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, F
     display: table;
   
   }
-  form{
-    display:grid;
-    grid-template-columns: 2fr 3fr 2fr;
-    background-color: #240b36;
-  }
-  input {
-    width:200px;
-    color:white;
-  }
-  
+
   h2 {
     text-align: center;
     margin-bottom: 0px;
     line-height: 1;
-    color: gray;
+    color:white;
   }
  
   
   ul {
     list-style: none;
-    margin-top: 10px;
-    padding: 5px;
+    margin-top: 20px;
     border-radius: 5px;
     background-color:wheat;
     width:500px;
     margin-left:350px;
   }
   ul li {
-    color: #899098;
+    color:darkblue;;
     font-weight: 400;
     border-bottom: 1px solid #cfcbcc;
     padding: 8px 0;
   
+  }
+  #alltasks{
+    border-radius: 30px;
+    color:black;
+    background-color: aliceblue;
   }
   ul li:before {
     content: "";
@@ -65,27 +60,45 @@ background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, F
     font-size: 20px;
   }
   ul li:hover {
-    text-decoration: line-through;
+    font-size: 22px;
     cursor: pointer;
   }
   ul li:last-child {
     border-bottom: none;
   }
   
-  .checked {
-    color: green;
-  }
-  .checked:before {
-    content: "\2713";
-    padding: 10px 10px;
-    font-size: 20px;
-  }
-  .checked:hover {
-    text-decoration: none;
-  }
-  .checked:hover:after {
-    content: "(Delete)";
-    color: tomato;
-    text-align: right;
-  }
+#tasklist{
+  margin-left: 300px;
+}
+
+#tasklist{
+  list-style: none;
+}
+#tasklist li{
+  padding-bottom: 5px;
+}
+.remove_item{
+  color: red;
+  padding: 10px 5px 10px 10px;
   
+}
+
+.clickeable{
+  cursor: pointer;
+}
+
+.update_icon{
+  color: green;
+  padding: 10px 10px 10px 0;
+}
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+.header{
+  color:wheat;
+}

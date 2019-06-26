@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link data-require="bootstrap@4.1.1" data-semver="4.1.1" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             
@@ -16,17 +17,22 @@
 <body>
     <div class="container">
 
-<h2>OUR TO-DO APPLICATION</h2>
+<h2 class="header">OUR TO-DO APPLICATION</h2>
 
   
   <form  action="#">
-    <!-- <input type="text" name="item" id="item" placeholder="Add New" />   -->
-    <div></div>
-    <input type="text" name="item" id="item" placeholder="Add New ..">
-    <a class="btn-floating btn-large waves-effect waves-light red" id="addButton"><i class="material-icons">+</i></a>
+    <div>
+        <label for="alltasks">ADD YOUR TASKS</label>
+        <input id="alltasks" type="text" />
+      </div>
+     
+      <div>
+        <a class="btn-floating btn-large waves-effect waves-light red" id="addButton"><i class="material-icons">+</i></a>
+      </div>
+ 
     
 </form>  
-<ul id="list"></ul>
+<ul id="tasklist"></ul>
 
 </div>
  
