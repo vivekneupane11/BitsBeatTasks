@@ -151,3 +151,20 @@ i{
         display:none;
     }
   }
+
+  .icons{
+      color:yellowgreen;
+  }
+  #c-password{
+    width:250px;
+    margin:0px;
+    padding:0px;
+  }
+  #forget{
+    float:right;
+    margin-right:40px;
+    margin-top:1px;
+  }
+  .log{
+    margin-right:10px;
+  }

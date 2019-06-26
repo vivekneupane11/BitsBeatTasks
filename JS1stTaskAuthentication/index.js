@@ -1,13 +1,13 @@
-var DOMSTRINGS = (function(){
-var DomName = document.getElementById('name');
-var DomContact = document.getElementById('contact');
-var DomEmail = document.getElementById('email');
-var DomPassword = document.getElementById('password');
-var DomConfirmPassword = document.getElementById('c-password');
-var DomCheckAccept = document.getElementById('accept-check');
-var DomChecklabel = document.getElementById('checklabel');
-var DomEyeOpener = document.getElementById('eyeOpener');
-var DomSignupButton = document.getElementById('signup');
+let DOMSTRINGS = (function(){
+let DomName = document.getElementById('name');
+let DomContact = document.getElementById('contact');
+let DomEmail = document.getElementById('email');
+let DomPassword = document.getElementById('password');
+let DomConfirmPassword = document.getElementById('c-password');
+let DomCheckAccept = document.getElementById('accept-check');
+let DomChecklabel = document.getElementById('checklabel');
+let DomEyeOpener = document.getElementById('eyeOpener');
+let DomSignupButton = document.getElementById('signup');
 
 return {
 	name: DomName,
@@ -24,14 +24,14 @@ return {
 
 })();
 //iconsdomerrors
-var DomNameError = document.getElementById('nameerror');
-var DomEmailError = document.getElementById('emailerror');
-var DomContactError = document.getElementById('contacterror');
-var DomPasswordError = document.getElementById('passworderror');
+let DomNameError = document.getElementById('nameerror');
+let DomEmailError = document.getElementById('emailerror');
+let DomContactError = document.getElementById('contacterror');
+let DomPasswordError = document.getElementById('passworderror');
 //Check icons
-var isitEmail = false;
-var isitPassword = false;
-var isitChecked = false;
+let isitEmail = false;
+let isitPassword = false;
+let isitChecked = false;
    
 DOMSTRINGS.name.addEventListener('input',function(){  
       DomNameError.style.display = "none";
@@ -47,8 +47,8 @@ DOMSTRINGS.contact.addEventListener('input',function(){
      }
 });
 DOMSTRINGS.email.addEventListener('input',function(){
-      var regEmail = /^[a-zA-Z0-9]+@(gmail|facebook|yahoo)\.com/;
-      var isEmail =  regEmail.test(DOMSTRINGS.email.value);
+      let regEmail = /^[a-zA-Z0-9]+@(gmail|facebook|yahoo)\.com/;
+      let isEmail =  regEmail.test(DOMSTRINGS.email.value);
       if(isEmail ){
          DomEmailError.style.display="none";
          isitEmail = true;
