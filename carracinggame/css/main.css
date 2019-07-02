@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+* body {
+  background: #0F2027;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#2C5364), color-stop(#203A43), to(#0F2027));
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+* body .wrapper {
+  height: 100vh;
+  min-width: 1200px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+* body .wrapper .cover {
+  height: 100vh;
+  background-color: yellow;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ff0084;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#33001b), to(#ff0084));
+  background: linear-gradient(to right, #33001b, #ff0084);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+* body .wrapper .cover h1 {
+  font-size: 90px;
+  font-weight: 700;
+  color: whitesmoke;
+}
+
+* body .wrapper .cover h4 {
+  font-size: 48px;
+}
+
+* body .wrapper .cover .start-button {
+  margin: 2rem auto;
+  text-align: center;
+  width: 13rem;
+  padding: 0.01rem 0;
+  background: #3797FF;
+  color: #FFFFFF;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  position: relative;
+  background-color: #000000;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#434343), to(#000000));
+  background: linear-gradient(to right, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+* body .wrapper .cover .start-button p {
+  vertical-align: middle;
+  font-family: "Lato";
+  font-size: 1.75rem;
+}
+
+* body .wrapper .cover .start-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-color: transparent black;
+  border-style: solid;
+  border-width: 45px 0px 45px 45px;
+  top: -10px;
+  left: 100%;
+}
+
+* body .wrapper .cover .start-button:hover {
+  color: black;
+  cursor: pointer;
+}
+
+* body .wrapper .sidecover {
+  height: 100vh;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  background-color: transparent;
+  position: relative;
+}
+
+* body .wrapper .sidecover .road {
+  margin-top: 100vh;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: #0F2027;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#2C5364), color-stop(#203A43), to(#0F2027));
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+* body .wrapper .sidecover .road .lane1 {
+  width: 100%;
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+}
+
+* body .wrapper .sidecover .road .lane1 .car1 {
+  height: 150px;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5px;
+}
+
+* body .wrapper .sidecover .road .lane1 .car1 img {
+  max-width: 200px;
+  max-height: 150px;
+}
+
+* body .wrapper .sidecover .road .lane2 {
+  width: 100%;
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+}
+
+* body .wrapper .sidecover .road .lane2 .car2 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  height: 150px;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5px;
+}
+
+* body .wrapper .sidecover .road .lane2 .car2 img {
+  max-width: 200px;
+  max-height: 150px;
+}
+
+* body .wrapper .sidecover .road .lane2 .mycar {
+  position: absolute;
+  bottom: 0px;
+  margin-left: 10px;
+  height: 130px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body .wrapper .sidecover .road .lane2 .mycar img {
+  max-width: 200px;
+  max-height: 150px;
+}
+
+* body .wrapper .sidecover .road .lane3 {
+  width: 100%;
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+}
+
+* body .wrapper .sidecover .road .lane3 .car3 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  height: 150px;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5px;
+}
+
+* body .wrapper .sidecover .road .lane3 .car3 img {
+  max-width: 200px;
+  max-height: 150px;
+}
+
+* body .wrapper .sidecover .road .lines {
+  margin-top: -400px;
+  -ms-flex-preferred-size: 2%;
+      flex-basis: 2%;
+  padding: 5px;
+  height: 150vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* body .wrapper .sidecover .road .lines .line {
+  top: 15px;
+  height: 60px;
+  width: 4px;
+  background-color: whitesmoke;
+}
+/*# sourceMappingURL=main.css.map */
